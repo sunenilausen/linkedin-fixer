@@ -3,7 +3,7 @@ function removeSuggestedPosts() {
   // Find all span elements containing 'Suggested'
   const spans = document.querySelectorAll('span');
   spans.forEach(span => {
-    if (span.textContent === 'Suggested') {
+    if (span.textContent.trim() === 'Suggested') {
       // Find the parent div with a 'data-id' attribute
       let parent = span.parentElement;
       while (parent && !parent.hasAttribute('data-id')) {
