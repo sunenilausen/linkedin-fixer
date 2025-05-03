@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "LinkedIn Suggested Post Blocker",
   "version": "1.0",
-  "description": "A Chrome extension that blocks suggested posts on LinkedIn",
+  "description": "A browser extension that blocks suggested posts on LinkedIn",
   "permissions": [
     "activeTab",
     "scripting"
@@ -18,5 +18,11 @@
       "matches": ["https://www.linkedin.com/*"],
       "js": ["content.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "linkedin-suggested-blocker@example.com",
+      "strict_min_version": "57.0"
+    }
+  }
 }
